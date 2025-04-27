@@ -30,6 +30,23 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             max-width: 900px;
         }
+        .timeline-box {
+            position: relative;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.6s ease, opacity 0.6s ease;
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        
+        .timeline-box.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
 
         header img {
             width: 150px;
@@ -47,7 +64,7 @@
         }
 
         main {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 40px auto;
             padding: 0 20px;
         }
@@ -66,97 +83,62 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
-        h2 {
-            color: #2a2a2a;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            font-size: 2rem;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #1d4ed8;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #2563eb;
-            text-decoration: underline;
-        }
-
-        .timeline {
+        .timeline-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             position: relative;
-            margin: 40px 0;
-            padding-left: 30px;
+            padding: 50px 0;
         }
 
-        .timeline::before {
+        .timeline-container::before {
             content: '';
             position: absolute;
-            left: 15px;
-            top: 0;
-            bottom: 0;
             width: 4px;
             background: #1d4ed8;
-            border-radius: 2px;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        .timeline-item {
+        .timeline-column {
+            flex: 1;
+            padding: 20px 40px;
+            max-width: 600px;
+        }
+
+        .timeline-box {
             position: relative;
-            margin-bottom: 40px;
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 0.8s ease forwards;
-            animation-delay: calc(var(--i) * 0.2s);
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease;
         }
 
-        .timeline-dot {
+        .timeline-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-box::before {
+            content: '';
             position: absolute;
-            left: 7px;
             width: 16px;
             height: 16px;
-            background: white;
             border: 4px solid #1d4ed8;
+            background: white;
             border-radius: 50%;
-            top: 0;
+            top: 20px;
+            left: -45px;
+            transform: translateX(50%);
         }
 
-        .timeline-content {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .timeline-content h3 {
-            margin: 0 0 5px;
-            color: #1d3557;
-        }
-
-        .timeline-content span {
-            font-size: 0.9rem;
-            color: #777;
-        }
-
-        .timeline-content p {
-            margin-top: 10px;
-            color: #555;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        h2, h3, h4, span, p {
+            margin: 0;
+            padding: 5px 0;
         }
 
         footer {
@@ -164,6 +146,15 @@
             padding: 20px;
             color: #888;
             font-size: 14px;
+        }
+
+        a {
+            color: #1d4ed8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -180,42 +171,49 @@
             <p>I'm a Master's student in Computer Science at Syracuse University passionate about backend development, cloud services, machine learning, and data-driven solutions. Currently seeking full-time roles starting 2025.</p>
         </section>
 
-        <section id="experience">
-            <h2>Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item" style="--i: 1;">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>IT Intern, Johnson Controls</h3>
-                        <h4>Milwaukee, WI, USA</h4>
+        <section>
+            <h2>Timeline</h2>
+            <div class="timeline-container">
+                <div class="timeline-column">
+                    <h3>Work Experience</h3>
+
+                    <div class="timeline-box">
                         <span>May 2024 - Aug 2024</span>
-                        <p>Developed Python-based data pipelines on AWS, integrated Power BI with SQL Server, enhanced CI/CD workflows.</p>
-                        <p>Integrated Power BI with SQL Server for real-time reporting supported OpenBlue AI with analytics on building operations.</p>
-                        <p>Partnered with DevOps to enhance cloud CI/CD workflows and improve system scalability and uptime.</p>
-                        <p>Worked with cross-functional teams to deliver reliable data solutions, ensuring platform availability and audit accuracy.</p>
+                        <h4>IT Intern, Johnson Controls</h4>
+                        <p>Milwaukee, WI, USA</p>
+                        <p>Built Python pipelines on AWS, integrated Power BI, enhanced CI/CD workflows, supported OpenBlue AI analytics.</p>
                     </div>
-                </div>
-                <div class="timeline-item" style="--i: 2;">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Software Developer, iConsult</h3>
-                        <h4>Syracuse, NY, USA</h4>
+
+                    <div class="timeline-box">
                         <span>Mar 2024 - May 2024</span>
-                        <p>Integrated Garmin wearable data into real-time health apps using React and AWS services.</p>
-                        <p>Built responsive UI components in React and TypeScript to visualize live health metrics from wearable devices.</p>
-                        <p> ollaborated on AWS-hosted services, aligning features with stakeholder needs in a regulated healthcare domain.</p>
-        
+                        <h4>Software Developer, iConsult</h4>
+                        <p>Syracuse, NY, USA</p>
+                        <p>Integrated Garmin wearable data into real-time health applications using React and AWS services.</p>
+                    </div>
+
+                    <div class="timeline-box">
+                        <span>Mar 2023 - May 2023</span>
+                        <h4>Data Analyst Intern, Xangars</h4>
+                        <p>Navi Mumbai, India</p>
+                        <p>Built SQL queries, ETL pipelines, and Power BI dashboards to optimize backend operations.</p>
                     </div>
                 </div>
-                <div class="timeline-item" style="--i: 3;">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Data Analyst Intern, Xangars</h3>
-                        <h4>Navi Mumbai, Maharashtra, India</h4>
-                        <span>Mar 2023 - May 2023</span>
-                        <p>Designed SQL queries and stored procedures in SQL Server to streamline backend processing by 30%.</p>
-                        <p>Built ETL pipelines and Power BI dashboards that integrated data from flat files and external APIs.</p>
-                        <p>Assisted QA through trend analysis, debugging and contributed to documentation for cross-team knowledge sharing.</p>
+
+                <div class="timeline-column">
+                    <h3>Education</h3>
+
+                    <div class="timeline-box">
+                        <span>Aug 2023 - May 2025</span>
+                        <h4>Master of Science in Computer Science</h4>
+                        <p>Syracuse University, Syracuse, NY</p>
+                        <p>Relevant Coursework: AI, DBMS, OOD, IoT, OS.</p>
+                    </div>
+
+                    <div class="timeline-box">
+                        <span>Aug 2019 - Jun 2023</span>
+                        <h4>Bachelor of Engineering in Computer Science</h4>
+                        <p>University of Mumbai, Navi Mumbai, India</p>
+                        <p>Relevant Coursework: Machine Learning, Big Data, NLP, Blockchain.</p>
                     </div>
                 </div>
             </div>
@@ -269,5 +267,18 @@
             loop: true
         });
     </script>
+    <script>
+        const boxes = document.querySelectorAll('.timeline-box');
+    
+        window.addEventListener('scroll', () => {
+            boxes.forEach(box => {
+                const boxTop = box.getBoundingClientRect().top;
+                if (boxTop < window.innerHeight - 100) {
+                    box.classList.add('show');
+                }
+            });
+        });
+    </script>
+    
 </body>
 </html>
