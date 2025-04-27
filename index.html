@@ -11,11 +11,12 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f9f9f9, #e0eafc);
+            background: linear-gradient(135deg, rgba(249,249,249,0.7), rgba(224,234,252,0.7)),
+                        url('background.jpg') no-repeat center center/cover;
             color: #333;
             scroll-behavior: smooth;
         }
-
+    
         header {
             height: 90vh;
             display: flex;
@@ -23,8 +24,11 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: transparent;
+            background: rgba(255, 255, 255, 0.5); /* Add slight white overlay behind profile to improve visibility */
             padding: 20px;
+            border-radius: 20px;
+            margin: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         header img {
