@@ -83,133 +83,108 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
-            .timeline-horizontal {
-                position: relative;
-                margin: 50px 0;
-                padding: 20px;
-            }
-            
-            .timeline-horizontal::before {
-                content: '';
-                position: absolute;
-                left: 50%;
-                top: 0;
-                bottom: 0;
-                width: 3px;
-                background: #1d4ed8;
-                transform: translateX(-50%);
-            }
-            
-            .timeline-item-horizontal {
-                display: flex;
-                align-items: center;
-                margin-bottom: 100px;
-                position: relative;
-            }
-            
-            .timeline-left, .timeline-center, .timeline-right {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .timeline-left {
-                width: 25%;
-                text-align: right;
-                padding-right: 20px;
-            }
-            
-            .timeline-date {
-                font-weight: bold;
-                font-size: 1.2rem;
-                color: #1f2937;
-            }
-            
-            .timeline-center {
-                width: 50px;
-                position: relative;
-            }
-            
-            .timeline-marker {
-                background: white;
-                padding: 8px;
-                border-radius: 50%;
-                box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-                z-index: 2;
-            }
-            
-            .timeline-marker img {
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                object-fit: contain;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-            
-            .timeline-marker img:hover {
-                transform: scale(1.1);
-                box-shadow: 0 0 15px rgba(29, 78, 216, 0.5);
-            }
-            
-            .timeline-right {
-                width: 65%;
-                padding-left: 30px;
-            }
-            
-            .timeline-content {
-                background: white;
-                border-radius: 12px;
-                padding: 25px;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            }
-            
-            .timeline-content h3 {
-                margin: 0;
-                font-size: 1.8rem;
-                color: #1d3557;
-            }
-            
-            .timeline-content h4 {
-                margin: 10px 0 15px 0;
-                font-size: 1.2rem;
-                color: #4b5563;
-            }
-            
-            .timeline-content ul {
-                padding-left: 20px;
-                margin: 0;
-            }
-            
-            .timeline-content ul li {
-                margin-bottom: 10px;
-                color: #555;
-            }
-            .timeline-item-horizontal {
-                opacity: 0;
-                transform: translateY(50px);
-                transition: opacity 0.8s ease, transform 0.8s ease;
-                }
-                
-                .timeline-item-horizontal.show {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-                
-                /* Make Card Size Match Intro Box */
-                .timeline-content {
-                    background: white;
-                    border-radius: 12px;
-                    padding: 25px;
-                    max-width: 1200px; /* Match intro */
-                    margin: 0 auto; /* Center it */
-                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-                }
-                
-                /* Optional: Add smoother hover on logo */
-                .timeline-marker img:hover {
-                    transform: scale(1.1);
-                    box-shadow: 0 0 15px rgba(29, 78, 216, 0.5);
-                }
+        .timeline-horizontal {
+            position: relative;
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 1200px;
+        }
+        
+        .timeline-horizontal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            background: #1d4ed8;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        .timeline-item-horizontal {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 100px;
+            position: relative;
+        }
+        
+        .timeline-left {
+            width: 25%;
+            text-align: right;
+            padding-right: 20px;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #1f2937;
+        }
+        
+        .timeline-center {
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2; /* Logo should appear above line */
+        }
+        
+        .timeline-marker {
+            background: white;
+            padding: 8px;
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-marker img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: contain;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .timeline-marker img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(29, 78, 216, 0.5);
+        }
+        
+        .timeline-right {
+            width: 65%;
+            padding-left: 30px;
+        }
+        
+        .timeline-content {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            width: 100%;
+        }
+        
+        .timeline-content h3 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #1d3557;
+        }
+        
+        .timeline-content h4 {
+            margin: 10px 0 15px 0;
+            font-size: 1.2rem;
+            color: #4b5563;
+        }
+        
+        .timeline-content ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+        
+        .timeline-content ul li {
+            margin-bottom: 10px;
+            color: #555;
+        }
             
 
         h2, h3, h4, span, p {
@@ -303,7 +278,7 @@
                     </div>
                     <div class="timeline-center">
                     <div class="timeline-marker">
-                        <img src="xangars-logo.png" alt="Xangars Logo">
+                        <img src="xangnam-logo.png" alt="Xangars Logo">
                     </div>
                     </div>
                     <div class="timeline-right">
@@ -320,8 +295,54 @@
             
                 </div>
             </section>
-          
             
+            <section>
+                <h2>Education</h2>
+                <div class="timeline-horizontal">
+            
+                <div class="timeline-item-horizontal">
+                    <div class="timeline-left">
+                    <div class="timeline-date">Aug 2023 – May 2025</div>
+                    </div>
+                    <div class="timeline-center">
+                    <div class="timeline-marker">
+                        <img src="syracuse-logo.png" alt="Syracuse University Logo">
+                    </div>
+                    </div>
+                    <div class="timeline-right">
+                    <div class="timeline-content">
+                        <h3>Syracuse University</h3>
+                        <h4>Master of Science in Computer Science</h4>
+                        <ul>
+                        <li>Focused on AI, Cloud Computing, Databases, IoT, and Operating Systems.</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            
+                <div class="timeline-item-horizontal">
+                    <div class="timeline-left">
+                    <div class="timeline-date">Aug 2019 – Jun 2023</div>
+                    </div>
+                    <div class="timeline-center">
+                    <div class="timeline-marker">
+                        <img src="mumbai-logo.png" alt="University of Mumbai Logo">
+                    </div>
+                    </div>
+                    <div class="timeline-right">
+                    <div class="timeline-content">
+                        <h3>University of Mumbai</h3>
+                        <h4>Bachelor of Engineering in Computer Science</h4>
+                        <ul>
+                        <li>Specialized in Machine Learning, Big Data, NLP, Blockchain Technologies.</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            
+                </div>
+            </section>
+          
             
             
 
@@ -385,25 +406,6 @@
             });
         });
     </script>
-    <script>
-        const timelineItems = document.querySelectorAll('.timeline-item-horizontal');
-        
-        function revealOnScroll() {
-          timelineItems.forEach(item => {
-            const windowHeight = window.innerHeight;
-            const elementTop = item.getBoundingClientRect().top;
-            const elementVisible = 100;
-        
-            if (elementTop < windowHeight - elementVisible) {
-              item.classList.add('show');
-            }
-          });
-        }
-        
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('load', revealOnScroll);
-        </script>
-        
     
 </body>
 </html>
