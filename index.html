@@ -83,85 +83,93 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
-            .timeline-horizontal {
+                .timeline-horizontal {
                 position: relative;
                 margin: 50px 0;
                 padding: 20px;
-            }
-            
-            .timeline-item-horizontal {
+                }
+                
+                .timeline-item-horizontal {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 margin-bottom: 70px;
                 position: relative;
-            }
-            
-            .timeline-horizontal::before {
+                }
+                
+                .timeline-horizontal::before {
                 content: '';
                 position: absolute;
-                left: 110px;
+                left: 27%;
                 top: 0;
                 bottom: 0;
                 width: 2px;
                 background: #1d4ed8;
-            }
-            
-            .timeline-date {
-                width: 200px;
+                }
+                
+                .timeline-date {
+                width: 25%;
                 text-align: right;
                 font-weight: bold;
-                color: #555;
+                color: #333;
                 padding-right: 30px;
-                font-size: 1rem;
-            }
-            
-            .timeline-marker {
+                font-size: 1.1rem;
+                }
+                
+                .timeline-marker {
                 width: 80px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-            }
-            
-            .timeline-marker img {
-                width: 40px;
-                height: 40px;
+                position: relative;
+                }
+                
+                .timeline-marker img {
+                width: 50px;
+                height: 50px;
                 object-fit: contain;
                 border-radius: 50%;
                 background: white;
                 padding: 5px;
-                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-            }
-            
-            .timeline-content {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease;
+                }
+                
+                .timeline-marker img:hover {
+                box-shadow: 0 0 15px rgba(30, 58, 138, 0.8);
+                transform: scale(1.1);
+                }
+                
+                .timeline-content {
                 background: white;
-                border-radius: 10px;
-                padding: 20px;
-                width: 70%;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 12px;
+                padding: 25px;
+                width: 60%;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                 margin-left: 40px;
-            }
-            
-            .timeline-content h3 {
+                }
+                
+                .timeline-content h3 {
                 margin: 0;
-                font-size: 1.5rem;
+                font-size: 1.8rem;
                 color: #1d3557;
-            }
-            
-            .timeline-content h4 {
+                }
+                
+                .timeline-content h4 {
                 margin-top: 5px;
-                font-size: 1rem;
+                font-size: 1.2rem;
                 color: #4a4a4a;
-            }
-            
-            .timeline-content ul {
+                }
+                
+                .timeline-content ul {
                 margin-top: 10px;
                 padding-left: 20px;
-            }
-            
-            .timeline-content ul li {
-                margin-bottom: 8px;
+                }
+                
+                .timeline-content ul li {
+                margin-bottom: 10px;
                 color: #555;
-            }
+                }
+            
 
         h2, h3, h4, span, p {
             margin: 0;
@@ -201,8 +209,8 @@
 
             <p>My technical expertise spans Python, Java, C++, JavaScript, and cloud platforms like AWS and GCP. I am driven by the challenge of solving complex problems and creating solutions that bridge real-world needs with cutting-edge technology.</p>
         </section>
-        <section>
-            <h2>Work Experience</h2>
+            <section>
+                <h2>Work Experience</h2>
                 <div class="timeline-horizontal">
             
                 <div class="timeline-item-horizontal">
@@ -230,8 +238,8 @@
                     <h3>iConsult, Albany Health Management</h3>
                     <h4>Software Developer</h4>
                     <ul>
-                        <li>Integrated Garmin wearable data into React-based real-time health applications.</li>
-                        <li>Collaborated on AWS-hosted backend services for health tracking.</li>
+                        <li>Integrated Garmin wearable data into React-based health tracking apps.</li>
+                        <li>Collaborated on AWS-hosted backend services for health monitoring.</li>
                     </ul>
                     </div>
                 </div>
@@ -239,14 +247,14 @@
                 <div class="timeline-item-horizontal">
                     <div class="timeline-date">Mar 2023 – May 2023</div>
                     <div class="timeline-marker">
-                    <img src="xangars-logo.png" alt="Xangars Logo">
+                    <img src="xangnam-logo.png" alt="Xangars Logo">
                     </div>
                     <div class="timeline-content">
                     <h3>Xangars</h3>
                     <h4>Data Analyst Intern</h4>
                     <ul>
-                        <li>Designed SQL queries and ETL pipelines for backend optimization.</li>
-                        <li>Built interactive Power BI dashboards integrating external APIs and datasets.</li>
+                        <li>Built SQL queries and ETL pipelines to optimize backend operations.</li>
+                        <li>Created Power BI dashboards integrating external APIs and datasets.</li>
                     </ul>
                     </div>
                 </div>
@@ -288,6 +296,7 @@
             
                 </div>
             </section>
+            
             
             
 
