@@ -184,6 +184,32 @@
                 margin-bottom: 10px;
                 color: #555;
             }
+            .timeline-item-horizontal {
+                opacity: 0;
+                transform: translateY(50px);
+                transition: opacity 0.8s ease, transform 0.8s ease;
+                }
+                
+                .timeline-item-horizontal.show {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                
+                /* Make Card Size Match Intro Box */
+                .timeline-content {
+                    background: white;
+                    border-radius: 12px;
+                    padding: 25px;
+                    max-width: 1200px; /* Match intro */
+                    margin: 0 auto; /* Center it */
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+                }
+                
+                /* Optional: Add smoother hover on logo */
+                .timeline-marker img:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 0 15px rgba(29, 78, 216, 0.5);
+                }
             
 
         h2, h3, h4, span, p {
@@ -359,6 +385,25 @@
             });
         });
     </script>
+    <script>
+        const timelineItems = document.querySelectorAll('.timeline-item-horizontal');
+        
+        function revealOnScroll() {
+          timelineItems.forEach(item => {
+            const windowHeight = window.innerHeight;
+            const elementTop = item.getBoundingClientRect().top;
+            const elementVisible = 100;
+        
+            if (elementTop < windowHeight - elementVisible) {
+              item.classList.add('show');
+            }
+          });
+        }
+        
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+        </script>
+        
     
 </body>
 </html>
