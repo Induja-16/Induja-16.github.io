@@ -83,58 +83,85 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .timeline-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            position: relative;
-            padding: 50px 0;
-        }
-
-        .timeline-container::before {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background: #1d4ed8;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .timeline-column {
-            flex: 1;
-            padding: 20px 40px;
-            max-width: 600px;
-        }
-
-        .timeline-box {
-            position: relative;
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 50px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: 0.3s ease;
-        }
-
-        .timeline-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .timeline-box::before {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            border: 4px solid #1d4ed8;
-            background: white;
-            border-radius: 50%;
-            top: 20px;
-            left: -45px;
-            transform: translateX(50%);
-        }
+            .timeline-horizontal {
+                position: relative;
+                margin: 50px 0;
+                padding: 20px;
+            }
+            
+            .timeline-item-horizontal {
+                display: flex;
+                align-items: center;
+                margin-bottom: 70px;
+                position: relative;
+            }
+            
+            .timeline-horizontal::before {
+                content: '';
+                position: absolute;
+                left: 110px;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: #1d4ed8;
+            }
+            
+            .timeline-date {
+                width: 200px;
+                text-align: right;
+                font-weight: bold;
+                color: #555;
+                padding-right: 30px;
+                font-size: 1rem;
+            }
+            
+            .timeline-marker {
+                width: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .timeline-marker img {
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
+                border-radius: 50%;
+                background: white;
+                padding: 5px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            }
+            
+            .timeline-content {
+                background: white;
+                border-radius: 10px;
+                padding: 20px;
+                width: 70%;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                margin-left: 40px;
+            }
+            
+            .timeline-content h3 {
+                margin: 0;
+                font-size: 1.5rem;
+                color: #1d3557;
+            }
+            
+            .timeline-content h4 {
+                margin-top: 5px;
+                font-size: 1rem;
+                color: #4a4a4a;
+            }
+            
+            .timeline-content ul {
+                margin-top: 10px;
+                padding-left: 20px;
+            }
+            
+            .timeline-content ul li {
+                margin-bottom: 8px;
+                color: #555;
+            }
 
         h2, h3, h4, span, p {
             margin: 0;
@@ -174,66 +201,95 @@
 
             <p>My technical expertise spans Python, Java, C++, JavaScript, and cloud platforms like AWS and GCP. I am driven by the challenge of solving complex problems and creating solutions that bridge real-world needs with cutting-edge technology.</p>
         </section>
-
         <section>
-            <h2>Experience</h2>
-            <div class="timeline-container">
-                <div class="timeline-column">
-                    <h3>Work Experience</h3>
-
-                    <div class="timeline-box">
-                        <h4>IT Intern, Johnson Controls</h4>
-                        <p>Milwaukee, WI, USA</p>
-                        <span>May 2024 - Aug 2024</span>
-                        <p>●	Built Python-based data pipelines and automated backend services deployed on AWS for secure credential access.</p>
-                        <p>●	Integrated Power BI with SQL Server for real-time reporting supported OpenBlue AI with analytics on building operations.</p>
-                        <p>●	Partnered with DevOps to enhance cloud CI/CD workflows and improve system scalability and uptime.</p>
-                        <p>●	Worked with cross-functional teams to deliver reliable data solutions, ensuring platform availability and audit accuracy.</p>
+            <h2>Work Experience</h2>
+                <div class="timeline-horizontal">
+            
+                <div class="timeline-item-horizontal">
+                    <div class="timeline-date">May 2024 – Aug 2024</div>
+                    <div class="timeline-marker">
+                    <img src="johnson-logo.png" alt="Johnson Controls Logo">
                     </div>
-
-                    <div class="timeline-box">
-                        <h4>Software Developer, iConsult</h4>
-                        <p>Syracuse, NY, USA</p>
-                        <span>Mar 2024 - May 2024</span>
-                        
-                        <p>●	Integrated Garmin wearable data with real-time health tracking applications using React and AWS services.</p>
-                        <p>●	Built responsive UI components in React and TypeScript to visualize live health metrics from wearable devices.</p>
-                        <p>●	Collaborated on AWS-hosted services, aligning features with stakeholder needs in a regulated healthcare domain.</p>
-
-                    </div>
-
-                    <div class="timeline-box">
-                        <h4>Data Analyst Intern, Xangars</h4>
-                        <p>Navi Mumbai, India</p>
-                        <span>Mar 2023 - May 2023</span>
-                        <p>●	Designed SQL queries and stored procedures in SQL Server to streamline backend processing by 30%.</p>
-                        <p>●	Built ETL pipelines and Power BI dashboards that integrated data from flat files and external APIs.</p>
-                        <p>●	Assisted QA through trend analysis, debugging and contributed to documentation for cross-team knowledge sharing.</p>
-
+                    <div class="timeline-content">
+                    <h3>Johnson Controls</h3>
+                    <h4>IT Intern</h4>
+                    <ul>
+                        <li>Built Python pipelines on AWS and integrated Power BI with SQL Server.</li>
+                        <li>Enhanced cloud CI/CD workflows in collaboration with DevOps teams.</li>
+                        <li>Supported OpenBlue AI analytics for smart building operations.</li>
+                    </ul>
                     </div>
                 </div>
-
-        </section>
-        <section>
-            <h2>Education</h2>
-            <div class="timeline-container">
-                <div class="timeline-column">
-                    <div class="timeline-box">
-                        <span>Aug 2023 - May 2025</span>
-                        <h4>Master of Science in Computer Science</h4>
-                        <p>Syracuse University, Syracuse, NY</p>
-                        <p>Relevant Coursework: AI, DBMS, OOD, IoT, OS.</p>
+            
+                <div class="timeline-item-horizontal">
+                    <div class="timeline-date">Mar 2024 – May 2024</div>
+                    <div class="timeline-marker">
+                    <img src="iconsult-logo.png" alt="iConsult Logo">
                     </div>
-        
-                    <div class="timeline-box">
-                        <span>Aug 2019 - Jun 2023</span>
-                        <h4>Bachelor of Engineering in Computer Science</h4>
-                        <p>University of Mumbai, Navi Mumbai, India</p>
-                        <p>Relevant Coursework: Machine Learning, Big Data, NLP, Blockchain.</p>
+                    <div class="timeline-content">
+                    <h3>iConsult, Albany Health Management</h3>
+                    <h4>Software Developer</h4>
+                    <ul>
+                        <li>Integrated Garmin wearable data into React-based real-time health applications.</li>
+                        <li>Collaborated on AWS-hosted backend services for health tracking.</li>
+                    </ul>
                     </div>
                 </div>
-            </div>
-        </section>
+            
+                <div class="timeline-item-horizontal">
+                    <div class="timeline-date">Mar 2023 – May 2023</div>
+                    <div class="timeline-marker">
+                    <img src="xangars-logo.png" alt="Xangars Logo">
+                    </div>
+                    <div class="timeline-content">
+                    <h3>Xangars</h3>
+                    <h4>Data Analyst Intern</h4>
+                    <ul>
+                        <li>Designed SQL queries and ETL pipelines for backend optimization.</li>
+                        <li>Built interactive Power BI dashboards integrating external APIs and datasets.</li>
+                    </ul>
+                    </div>
+                </div>
+            
+                </div>
+            </section>
+            
+            <section>
+                <h2>Education</h2>
+                <div class="timeline-horizontal">
+            
+                <div class="timeline-item-horizontal">
+                    <div class="timeline-date">Aug 2023 – May 2025</div>
+                    <div class="timeline-marker">
+                    <img src="syracuse-logo.png" alt="Syracuse University Logo">
+                    </div>
+                    <div class="timeline-content">
+                    <h3>Syracuse University</h3>
+                    <h4>Master of Science in Computer Science</h4>
+                    <ul>
+                        <li>Focused on AI, Cloud Computing, Databases, IoT, and Operating Systems.</li>
+                    </ul>
+                    </div>
+                </div>
+            
+                <div class="timeline-item-horizontal">
+                    <div class="timeline-date">Aug 2019 – Jun 2023</div>
+                    <div class="timeline-marker">
+                    <img src="mumbai-logo.png" alt="University of Mumbai Logo">
+                    </div>
+                    <div class="timeline-content">
+                    <h3>University of Mumbai</h3>
+                    <h4>Bachelor of Engineering in Computer Science</h4>
+                    <ul>
+                        <li>Specialized in Machine Learning, Big Data, NLP, Blockchain Technologies.</li>
+                    </ul>
+                    </div>
+                </div>
+            
+                </div>
+            </section>
+            
+            
 
         <section>
             <h2>Projects</h2>
