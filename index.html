@@ -68,6 +68,37 @@
             margin: 40px auto;
             padding: 0 20px;
         }
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 2px solid #eee;
+            }
+            
+            .navbar ul {
+                list-style: none;
+                display: flex;
+                gap: 30px;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .navbar ul li a {
+                text-decoration: none;
+                color: #1d3557;
+                font-weight: 600;
+                font-size: 1rem;
+                transition: color 0.3s;
+            }
+            
+            .navbar ul li a:hover {
+                color: #1d4ed8;
+            }
 
         section {
             background: white;
@@ -198,6 +229,9 @@
             color: #888;
             font-size: 14px;
         }
+        html {
+            scroll-behavior: smooth;
+        }
 
         a {
             color: #1d4ed8;
@@ -211,13 +245,26 @@
 </head>
 <body>
     <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <img src="your-profile.jpg" alt="Induja Ragava">
+            <h1>Induja Ragava</h1>
+            <span id="typed-text" style="font-size: 1.2rem; color: #4a4a4a;"></span>
         <img src="your-profile.jpg" alt="Induja Ragava">
         <h1>Induja Ragava</h1>
         <span id="typed-text" style="font-size: 1.2rem; color: #4a4a4a;"></span>
     </header>
 
     <main>
-        <section>
+        <section id="about">
             <h2>About Me</h2>
             <p>Hi, I am Induja Ragava, a passionate Software Developer. I am currently completing my Master's in Computer Science at Syracuse University, with a focus on backend development, cloud technologies, and machine learning.</p>
 
@@ -225,7 +272,7 @@
 
             <p>My technical expertise spans Python, Java, C++, JavaScript, and cloud platforms like AWS and GCP. I am driven by the challenge of solving complex problems and creating solutions that bridge real-world needs with cutting-edge technology.</p>
         </section>
-        <section>
+        <section id="experience">
             <h2>Work Experience</h2>
             <div class="timeline-horizontal">
             
@@ -296,7 +343,7 @@
                 </div>
             </section>
             
-            <section>
+            <section id="education">
                 <h2>Education</h2>
                 <div class="timeline-horizontal">
             
@@ -346,7 +393,7 @@
             
             
 
-        <section>
+        <section id="projects">
             <h2>Projects</h2>
             <ul>
                 <li><strong>Fake Job Posting Detector:</strong> NLP-based classifier using TF-IDF and Random Forest. <a href="#">View on GitHub</a></li>
@@ -367,7 +414,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="contact">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:rsinduja16@gmail.com">rsinduja16@gmail.com</a></p>
             <p>LinkedIn: <a href="https://linkedin.com/in/induja-ragava" target="_blank">linkedin.com/in/induja-ragava</a></p>
