@@ -107,13 +107,16 @@
             content: '';
             position: absolute;
             top: 0;
-            bottom: 0;
-            left: 34%;
+            height: 0; /* Start with 0 height */
+            left: 30%; /* Adjusted position */
             width: 3px;
             background: #1d4ed8;
             z-index: 1;
-            }
-            
+            transition: height 1.2s ease-out;
+        }          
+        .timeline-horizontal.active::before {
+            height: 100%; /* Animate to full height */
+        }          
         
         .timeline-item-horizontal {
             display: flex;
