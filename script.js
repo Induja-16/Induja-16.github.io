@@ -78,3 +78,21 @@
 
 window.addEventListener('scroll', revealLogos);
 window.addEventListener('load', revealLogos);
+
+
+const projectCards = document.querySelectorAll('.project-card');
+function revealProjects() {
+        projectCards.forEach((card, index) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = card.getBoundingClientRect().top;
+        const elementVisible = 100;
+    
+        if (elementTop < windowHeight - elementVisible) {
+            setTimeout(() => {
+            card.classList.add('show');
+            }, index * 150); // 150ms delay between each card
+        }
+        });
+    }
+    window.addEventListener('scroll', revealProjects);
+    window.addEventListener('load', revealProjects);  
