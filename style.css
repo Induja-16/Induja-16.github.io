@@ -1,13 +1,19 @@
     /* Reset & Basics */
     header {
         text-align: center;
-        padding-top: 120px;
-        padding-bottom: 60px;
-        background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),
+        padding-top: 140px;
+        padding-bottom: 80px;
+        background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
                     url('background.jpg') no-repeat center center/cover;
         border-radius: 0 0 20px 20px;
         background-size: cover;
-    }
+        position: relative;
+    }      
+    #typed-text {
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: #1d3557;
+    }      
         
     body {
         font-family: 'Poppins', sans-serif;
@@ -103,20 +109,20 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        left: calc(25% + 40px);
+        left: 50%; /* EXACTLY center the line between left and right */
         width: 3px;
         background: #1d4ed8;
+        transform: translateX(-50%); /* Adjust alignment perfectly */
         z-index: 1;
-    }
+    }      
     
     .timeline-item-horizontal {
         display: flex;
-        align-items: center;
+        align-items: flex-start; /* 🛠️ Force all to start at top */
         margin-bottom: 100px;
-        opacity: 0;
-        transform: translateY(50px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-    }
+        position: relative;
+        gap: 20px; /* Optional spacing */
+    }      
     
     .timeline-item-horizontal.show {
         opacity: 1;
@@ -133,16 +139,18 @@
         font-weight: bold;
         font-size: 1.2rem;
         color: #1f2937;
-    }
+        padding-top: 10px; /* Optional */
+    }      
     
     .timeline-center {
         width: 80px;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center; /* 🛠️ Center logo within the box */
         position: relative;
         z-index: 2;
     }
+
     
     .timeline-marker {
         background: white;
@@ -173,7 +181,8 @@
         margin: 0;
         font-size: 1.8rem;
         color: #1d3557;
-    }
+        padding-top: 10px; /* 🛠️ Add top padding to align better */
+    }      
     
     .timeline-content h4 {
         margin: 10px 0 15px 0;
