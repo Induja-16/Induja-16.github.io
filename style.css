@@ -42,14 +42,15 @@
     .navbar {
         width: 100%;
         display: flex;
-        justify-content: center;
+        align-items: center;
         background: transparent;
-        padding: 15px 0;
+        padding: 15px 20px;
         position: fixed;
         top: 0;
         z-index: 1000;
         transition: background-color 0.4s ease, box-shadow 0.4s ease;
-    }
+      }
+      
     
     .navbar.scrolled {
         background: white;
@@ -289,4 +290,21 @@
           left: 20%; /* Move line slightly left on smaller screens */
         }
       }
+      .linkedin-button {
+        margin-left: auto;
+        background-color: #0077b5;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+      }
+      
+      .linkedin-button:hover {
+        background-color: #005582;
+        box-shadow: 0 0 12px rgba(0, 119, 181, 0.6);
+        transform: translateY(-2px);
+      }
+      
       
