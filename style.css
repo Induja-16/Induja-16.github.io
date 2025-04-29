@@ -103,17 +103,17 @@
         margin: 50px 0;
         }
         
-        /* Blue vertical line passing through logos */
         .timeline-horizontal::before {
             content: '';
             position: absolute;
             top: 0;
             bottom: 0;
-            left: calc(25% + 40px);  /* This centers the line at logo */
+            left: 34%;
             width: 3px;
             background: #1d4ed8;
             z-index: 1;
-        }
+            }
+            
         
         .timeline-item-horizontal {
             display: flex;
@@ -256,4 +256,9 @@
     .project-right a:hover {
         color: #2563eb;
     }
-    
+    @media (max-width: 768px) {
+        .timeline-horizontal::before {
+          left: 20%; /* Move line slightly left on smaller screens */
+        }
+      }
+      
