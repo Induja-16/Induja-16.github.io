@@ -47,17 +47,18 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    section {
+      /* section {
         opacity: 0;
         transform: translateY(50px);
         transition: all 0.6s ease;
-        scroll-margin-top: 100px; /* fixes navbar offset on scroll */
-      }
+        scroll-margin-top: 100px; /* fixes navbar offset on scroll 
+      } 
       
       section.visible {
         opacity: 1;
         transform: translateY(0);
-      }
+      }   */
+
       section:nth-of-type(even) {
         background-color: #f9fafb; /* very light gray */
       }
