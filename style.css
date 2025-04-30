@@ -67,7 +67,7 @@
       section {
         border-top: 1px solid #eee;
       }
-
+        #skills,
         #experience,
         #education,
         #projects,
@@ -499,31 +499,31 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 18px;
+        gap: 16px;
         margin-top: 30px;
       }
       
       .skill {
-        background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-        color: #1e3a8a;
+        background: linear-gradient(135deg, #e0eafc, #c9d8ff);
+        color: #1d3557;
         padding: 12px 20px;
         border-radius: 30px;
         font-weight: 600;
         font-size: 0.95rem;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        animation: float 5s ease-in-out infinite;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        animation: float 6s ease-in-out infinite;
         transition: transform 0.3s ease, background 0.3s ease;
       }
       
       .skill:hover {
-        transform: scale(1.1);
         background: #1d4ed8;
         color: white;
+        transform: scale(1.1);
       }
       
       @keyframes float {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-6px); }
-        100% { transform: translateY(0px); }
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-8px); }
+        100% { transform: translateY(0); }
       }
       
