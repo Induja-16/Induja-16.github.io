@@ -102,9 +102,15 @@
         display: flex;
         gap: 12px;
         align-items: center;
-        margin-right: 32px; /* ⬅️ Shift away from edge */
+        margin-right: 42px; /* ⬅️ Shift away from edge */
+      }
+      .icon-button.email {
+        background-color: #1d4ed8; /* blue */
       }
       
+      .icon-button.email:hover {
+        background-color: #1e40af;
+      }
     
       .navbar.scrolled {
         background: white;
