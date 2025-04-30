@@ -98,7 +98,7 @@ function revealProjects() {
     window.addEventListener('scroll', revealProjects);
     window.addEventListener('load', revealProjects);  
 
-    /*function copyEmail() {
+    function copyEmail() {
         const email = "rsinduja16@gmail.com";
         navigator.clipboard.writeText(email).then(() => {
           const toast = document.getElementById("email-toast");
@@ -109,10 +109,10 @@ function revealProjects() {
         });
       }
 
-      */
+      /*
       function copyEmail() {
         const email = "rsinduja16@gmail.com";
         navigator.clipboard.writeText(email).then(() => {
           alert("Email copied to clipboard!");
         });
-      }
+      } */
