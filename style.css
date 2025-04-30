@@ -474,11 +474,26 @@
         50%  { transform: translateY(-8px); }
         100% { transform: translateY(0); }
       }
+      #contact h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: #1d3557;
+        margin-bottom: 10px;
+      }
+      
+      #contact p {
+        text-align: center;
+        color: #4a4a4a;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+      }
+      
       .contact-form {
         display: flex;
         flex-direction: column;
         gap: 16px;
-        margin-top: 20px;
+        max-width: 600px;
+        margin: 0 auto;
       }
       
       .contact-form input,
@@ -487,8 +502,8 @@
         border: 1px solid #ccc;
         border-radius: 10px;
         font-size: 1rem;
-        width: 100%;
         box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        width: 100%;
       }
       
       .contact-form input:focus,
