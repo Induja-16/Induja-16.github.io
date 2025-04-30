@@ -591,28 +591,28 @@
       .email-toast.show {
         opacity: 1;
       }
-      
+     
       .icon-button {
-        width: 38px;
-        height: 38px;
+        width: 48px;
+        height: 48px;
         border-radius: 50%;
-        background-color: hsl(0, 0%, 100%)(115 12% 58%); /* Gmail red */
+        background-color: white;
         display: flex;
         align-items: center;
         justify-content: center;
-        text-decoration: none;
-        transition: transform 0.3s, box-shadow 0.3s;
+        margin-left: 12px;
+        transition: transform 0.2s;
+        border: none;
         cursor: pointer;
+        padding: 0;
       }
       
-      .icon-button svg {
-        width: 20px;
-        height: 20px;
-        fill: white;
+      .icon-img {
+        width: 28px;
+        height: 28px;
       }
       
       .icon-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
       }
-      
