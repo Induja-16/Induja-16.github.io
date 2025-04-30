@@ -99,11 +99,14 @@ function revealProjects() {
     window.addEventListener('load', revealProjects);  
 
     function copyEmail() {
-        navigator.clipboard.writeText("rsinduja16@gmail.com");
-        const alert = document.getElementById("copy-alert");
-        alert.style.opacity = 1;
-        setTimeout(() => {
-          alert.style.opacity = 0;
-        }, 1500);
+        const email = "rsinduja16@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+          const toast = document.getElementById("email-toast");
+          toast.classList.add("show");
+          setTimeout(() => {
+            toast.classList.remove("show");
+          }, 2000);
+        });
       }
+      
       

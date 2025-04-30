@@ -538,7 +538,7 @@
         position: relative;
         display: inline-block;
       }
-      
+      /*
       .gmail-icon {
         width: 32px;
         height: 32px;
@@ -564,4 +564,32 @@
         pointer-events: none;
         transition: opacity 0.3s ease;
       }
+      */
+      .icon-button.gmail {
+        background-color: #ea4335;
+      }
+      
+      .icon-button.gmail:hover {
+        background-color: #c1351d;
+      }
+      
+      /* Toast styling */
+      .email-toast {
+        position: fixed;
+        top: 90px;
+        right: 20px;
+        background: #333;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 6px;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        z-index: 999;
+        font-size: 0.85rem;
+      }
+      
+      .email-toast.show {
+        opacity: 1;
+      }
+      
       
