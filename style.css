@@ -9,11 +9,20 @@
         background-size: cover;
         position: relative;
     }      
-    #typed-text {
+   /* #typed-text {
         font-weight: bold;
         font-size: 1.4rem;
         color: #1d3557;
-    }      
+    }   
+    */ 
+    #typed-text {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #333;
+        letter-spacing: 0.5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      } 
         
     body {
         font-family: 'Poppins', sans-serif;
@@ -37,6 +46,26 @@
         margin-bottom: 40px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+
+    section {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.6s ease;
+        scroll-margin-top: 100px; /* fixes navbar offset on scroll */
+      }
+      
+      section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      section:nth-of-type(even) {
+        background-color: #f9fafb; /* very light gray */
+      }
+      
+      /* Optional: subtle separator */
+      section {
+        border-top: 1px solid #eee;
+      }
 
         #experience,
         #education,
@@ -72,6 +101,7 @@
         display: flex;
         gap: 12px;
         align-items: center;
+        margin-right: 32px; /* ⬅️ Shift away from edge */
       }
       
     
@@ -407,4 +437,53 @@
         }
       }
       
+      #skills {
+        margin-top: 40px;
+      }
+      
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+        margin-top: 20px;
+      }
+      
+      .skill-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        transition: transform 0.3s ease;
+      }
+      
+      .skill-card:hover {
+        transform: translateY(-4px);
+      }
+      
+      .skill-card h4 {
+        margin-bottom: 12px;
+        font-size: 1.1rem;
+        color: #1d3557;
+      }
+      
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      
+      .tag {
+        display: inline-block;
+        background: #e0eafc;
+        color: #1d3557;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: background 0.3s;
+      }
+      
+      .tag:hover {
+        background: #c9d8ff;
+      }
       
