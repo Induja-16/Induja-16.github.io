@@ -50,7 +50,7 @@
     });
     const timelineContainer = document.querySelector('.timeline-horizontal');
 
-        function activateTimeline() {
+    function activateTimeline() {
         const windowHeight = window.innerHeight;
         const elementTop = timelineContainer.getBoundingClientRect().top;
         const elementVisible = 100;
