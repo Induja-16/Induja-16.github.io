@@ -78,16 +78,17 @@
     
     /* Navbar */
     .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 20px;
-        background-color: white;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-      }
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 32px; /* Add horizontal padding here */
+      background-color: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    
       
       .navbar ul {
         display: flex;
@@ -100,8 +101,8 @@
       .nav-icons {
         display: flex;
         gap: 12px;
-        align-items: center;
-        margin-right: 32px; /* ⬅️ Shift away from edge */
+       /* align-items: center;
+        margin-right: 32px; /*  Shift away from edge */ 
       }
       
     
