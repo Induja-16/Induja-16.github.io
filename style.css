@@ -100,9 +100,7 @@
       
       .nav-icons {
         display: flex;
-        gap: 12px;
-       /* align-items: center;
-        margin-right: 32px; /*  Shift away from edge */ 
+        gap: 24px;
       }
       
     
