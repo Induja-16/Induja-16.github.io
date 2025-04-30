@@ -97,3 +97,11 @@ function revealProjects() {
     }
     window.addEventListener('scroll', revealProjects);
     window.addEventListener('load', revealProjects);  
+
+    function copyEmail() {
+        const email = document.getElementById("email-text").innerText;
+        navigator.clipboard.writeText(email).then(() => {
+          alert("Email copied to clipboard!");
+        });
+      }
+      

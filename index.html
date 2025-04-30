@@ -24,7 +24,6 @@
                 <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="nav-icons">
-                    <a href="mailto:rsinduja16@gmail.com">Email me</a>
 
                 <a href="https://www.linkedin.com/in/induja-ragava" target="_blank" class="icon-button linkedin" aria-label="LinkedIn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
@@ -38,11 +37,13 @@
                     </svg>
                   </a>
 
-                  <a href="mailto:rsinduja16@gmail.com" class="icon-button email" aria-label="Email">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
-                      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                    </svg>
-                  </a>
+                  <div class="copy-email">
+                    <span id="email-text">rsinduja16@gmail.com</span>
+                    <button onclick="copyEmail()" aria-label="Copy Email">
+                      <i class="fas fa-copy"></i>
+                    </button>
+                  </div>
+                  
                   
                 </div>
             </nav>

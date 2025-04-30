@@ -534,4 +534,29 @@
         transform: translateY(-2px);
         background: linear-gradient(to right, #1e40af, #4338ca);
       }
+      .copy-email {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background-color: #f0f4ff;
+        padding: 6px 10px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        color: #1d3557;
+        margin-left: 12px;
+        font-weight: 500;
+      }
+      
+      .copy-email button {
+        background: none;
+        border: none;
+        color: #1d3557;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: transform 0.2s ease;
+      }
+      
+      .copy-email button:hover {
+        transform: scale(1.1);
+      }
       
