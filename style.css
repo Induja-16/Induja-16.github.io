@@ -596,7 +596,7 @@
         width: 38px;
         height: 38px;
         border-radius: 50%;
-        background-color: #ea4335; /* Gmail red */
+        background-color: hsl(0, 0%, 100%)(115 12% 58%); /* Gmail red */
         display: flex;
         align-items: center;
         justify-content: center;
