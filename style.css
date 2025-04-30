@@ -619,9 +619,9 @@
         display: inline-block;
         margin-top: 20px;
         padding: 12px 30px;
-        border: 3px solid white;
-        border-radius: 40px;
-        font-size: 1.1rem;
+        border: 2px solid white;
+        border-radius: 30px;
+        font-size: 1rem;
         font-weight: 500;
         color: white;
         background: transparent;
@@ -630,9 +630,10 @@
       }
       
       .outlined-button:hover {
-        background: white;
+        background-color: white;
         color: #1d3557;
         transform: scale(1.05);
       }
+      
       
       
