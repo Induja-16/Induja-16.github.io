@@ -615,7 +615,7 @@
         transform: scale(1.1);
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
       }
-      /*.outlined-button {
+      .outlined-button {
         display: inline-block;
         margin-top: 20px;
         padding: 12px 30px;
@@ -634,7 +634,7 @@
         color: #1d3557;
         transform: scale(1.05);
       }
-      */
+      
       .download-btn {
         background-color: #1d4ed8; /* bold blue */
         color: white;
