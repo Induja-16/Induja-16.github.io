@@ -434,6 +434,9 @@
       .icon-button.email {
         background-color: #D44638;
       }
+      .icon-button.email:hover {
+        background-color: #b03024; /* Darker on hover */
+      }
       
       .icon-button.email svg {
         fill: white;
