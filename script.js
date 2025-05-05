@@ -33,22 +33,26 @@
     const navLinks = document.querySelectorAll('.navbar ul li a');
 
     window.addEventListener('scroll', () => {
-    let current = "";
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (pageYOffset >= sectionTop) {
-        current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-
-        link.classList.add('active');
-        }
-    });
-    });
+        let currentSectionId = "";
+      
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const scrollPos = window.scrollY + 150;
+      
+          if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+      
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentSectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+      
     const timelineContainer = document.querySelector('.timeline-horizontal');
 
     function activateTimeline() {
